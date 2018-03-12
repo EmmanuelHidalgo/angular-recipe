@@ -4,12 +4,10 @@ import 'rxjs/Rx'
 
 import { RecipeService } from '../recipes/recipe.service';
 import { Recipe } from '../recipes/recipe.model';
-import { AuthService } from '../auth/auth.service';
-
 
 @Injectable()
 export class DataStorageService {
-    constructor(private httpClient: HttpClient, private recipeService: RecipeService, private authService: AuthService){}
+    constructor(private httpClient: HttpClient, private recipeService: RecipeService){}
 
     storeRecipes(){
         // return this.httpClient.put('https://ng-recipe-book-78b02.firebaseio.com/recipes.json',
